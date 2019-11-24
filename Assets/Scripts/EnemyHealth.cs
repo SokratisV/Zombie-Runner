@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        BroadcastMessage("OnDamageTaken");
         hitPoints = Mathf.Max(hitPoints - damage, 0);
         if (hitPoints == 0) Destroy(gameObject);
     }
