@@ -12,6 +12,7 @@ public class WeaponZoom : MonoBehaviour
     private void OnDisable()
     {
         ZoomOut();
+        zoomToggle = false;
     }
     private void Update()
     {
@@ -25,23 +26,23 @@ public class WeaponZoom : MonoBehaviour
     {
         if (zoomToggle)
         {
-            ZoomIn();
+            ZoomOut();
         }
         else
         {
-            ZoomOut();
+            ZoomIn();
         }
         zoomToggle = !zoomToggle;
     }
 
-    private void ZoomOut()
+    private void ZoomIn()
     {
         m_camera.fieldOfView = zoomInFOV;
         controller.mouseLook.XSensitivity = zoomInSensitivity;
         controller.mouseLook.YSensitivity = zoomInSensitivity;
     }
 
-    private void ZoomIn()
+    private void ZoomOut()
     {
         m_camera.fieldOfView = normalFOV;
         controller.mouseLook.XSensitivity = normalSensitivity;
