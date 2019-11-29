@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
@@ -14,11 +11,13 @@ public class EnemyAI : MonoBehaviour
     float distanceToTarget = Mathf.Infinity;
     EnemyHealth health;
     Transform target;
+    EnemyAudioController audioController;
 
     private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         health = GetComponent<EnemyHealth>();
+        audioController = GetComponent<EnemyAudioController>();
         target = GameObject.FindWithTag("Player").transform;
     }
 
@@ -26,6 +25,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (health.IsDead)
         {
+            audioController.PlayClip(ClipType.Dead);
             enabled = false;
             navMeshAgent.enabled = false;
         }
@@ -68,6 +68,7 @@ public class EnemyAI : MonoBehaviour
     {
         GetComponent<Animator>().SetBool("attack", false);
         GetComponent<Animator>().SetTrigger("move");
+        audioController.PlayClip(ClipType.Chase);
         navMeshAgent.SetDestination(target.position);
     }
 

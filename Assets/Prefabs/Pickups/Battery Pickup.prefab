@@ -105,6 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restoreAngle: 90
   addIntensity: 1
+  pickupClip: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
 --- !u!1001 &1988740019162133149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120,12 +121,12 @@ PrefabInstance:
     - target: {fileID: 9193413023086789614, guid: 0af3b5cee9a630441989003b4db2e957,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.302
       objectReference: {fileID: 0}
     - target: {fileID: 9193413023086789614, guid: 0af3b5cee9a630441989003b4db2e957,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.337
       objectReference: {fileID: 0}
     - target: {fileID: 9193413023086789614, guid: 0af3b5cee9a630441989003b4db2e957,
         type: 3}
@@ -230,6 +231,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989412554206613315, guid: 11391d1dc472f3b469a21fc977fe3730,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.63
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6203915017057887364, guid: 11391d1dc472f3b469a21fc977fe3730, type: 3}

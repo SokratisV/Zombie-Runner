@@ -12,13 +12,13 @@ public class DeathHandler : MonoBehaviour
         gameOverCanvas.enabled = false;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            HandleDeath();
-        }
-    }
+    // private void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.Escape))
+    //     {
+    //         HandleDeath();
+    //     }
+    // }
 
     public void HandleDeath()
     {
