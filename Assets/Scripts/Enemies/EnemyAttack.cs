@@ -16,10 +16,6 @@ public class EnemyAttack : MonoBehaviour
     {
         if (target == null) return;
         target.TakeDamage(damage);
-    }
-
-    public void OnDamageTaken()
-    {
-
+        target.GetComponentInChildren<DisplayDamage>().ShowDamageCanvas();
     }
 }
