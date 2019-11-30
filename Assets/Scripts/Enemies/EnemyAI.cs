@@ -26,8 +26,9 @@ public class EnemyAI : MonoBehaviour
         if (health.IsDead)
         {
             audioController.PlayClip(ClipType.Dead);
-            enabled = false;
             navMeshAgent.enabled = false;
+            enabled = false;
+            return;
         }
 
         distanceToTarget = Vector3.Distance(target.position, transform.position);
